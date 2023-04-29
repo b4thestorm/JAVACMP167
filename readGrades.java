@@ -76,6 +76,44 @@ public class MyClass {
         
         return avgValue;
     }
+
+    public static int maxValue(int[] arr) {
+        int max = arr[0];
+         
+        for (int i = 1; i < arr.length; i++) {
+            if (max < arr[i] ) {
+                max = arr[i];
+            }
+        }
+
+       return max;
+    }
+
+    public static int maxValue(int[] arr, int firstIndex, int lastIndex) {
+        int max = arr[firstIndex];
+        int access;
+        
+        try {
+           access = arr[firstIndex];
+        } catch(Exception e) {
+            return -666;
+        }
+        
+        try {
+           access = arr[lastIndex];
+        } catch(Exception e) {
+            return -666;
+        }
+        
+        for (int i = firstIndex + 1; i <= lastIndex; i++) {
+            if (max < arr[i] ) {
+                max = arr[i];
+            }
+        }
+
+       return max;
+    }
+
     
     public static void main(String args[]) {
         readGrades();
