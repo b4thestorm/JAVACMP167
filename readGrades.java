@@ -63,6 +63,19 @@ public class MyClass {
         
         return value;
     }
+
+     public static double average(int [] arr) {
+        int sum = 0;
+        int i;
+        double avgValue;
+        for (i = 0 ; i < arr.length - 1; i++) {
+            sum += arr[i];
+        }
+        
+        avgValue = sum / i;
+        
+        return avgValue;
+    }
     
     public static void main(String args[]) {
         readGrades();
