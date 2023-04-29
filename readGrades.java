@@ -33,6 +33,36 @@ public class MyClass {
         
         return idx;
     }
+
+    public static int sum(int [] arr) {
+        int value = 0;
+        for (int i = 0; i < arr.length; i++) {
+            value += arr[i];
+        }
+        return value;
+    }
+    
+    public static int sum(int [] arr, int firstIndex, int lastIndex) {
+        int value = 0;
+        int access;
+        
+        try {
+           access = arr[firstIndex];
+        } catch(Exception e) {
+            return -666;
+        }
+        try {
+           access = arr[lastIndex];
+        } catch(Exception e) {
+            return -666;
+        }
+        
+        for (int i = firstIndex; i <= lastIndex; i++) {
+            value += arr[i];
+        }
+        
+        return value;
+    }
     
     public static void main(String args[]) {
         readGrades();
