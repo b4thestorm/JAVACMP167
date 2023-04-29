@@ -114,8 +114,21 @@ public class MyClass {
        return max;
     }
 
+    public static int indexOfFirstMaxValue(int[] arr) {
+        int maxIdx = 0;
+         
+        for (int i = 1; i < arr.length - 1; i++) {
+            if (arr[maxIdx] < arr[i] ) {
+                maxIdx = i;
+            }
+        }
+
+       return maxIdx;
+    }
+    
+
     
     public static void main(String args[]) {
-        readGrades();
+
     }
 }
