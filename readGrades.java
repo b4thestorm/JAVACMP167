@@ -125,9 +125,43 @@ public class MyClass {
 
        return maxIdx;
     }
-    
 
+    public static int minValue(int[] arr) {
+        int min = arr[0];
+        for (int i = 1; i < arr.length; ++i) {
+            if ( arr[i] < min ) {
+                min = arr[i];
+            }
+        }
+        
+        return min;
+    }
     
+    public static int minValue(int[] arr, int firstIndex, int lastIndex) {
+        int min = arr[firstIndex];
+        int access;
+        
+        try {
+           access = arr[firstIndex];
+        } catch(Exception e) {
+            return -666;
+        }
+        
+        try {
+           access = arr[lastIndex];
+        } catch(Exception e) {
+            return -666;
+        }
+        
+        for (int i = firstIndex + 1; i <= lastIndex; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+
+       return min;
+    }
+       
     public static void main(String args[]) {
 
     }
