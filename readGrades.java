@@ -161,6 +161,46 @@ public class MyClass {
 
        return min;
     }
+
+    public static int indexOfFirstMinValue(int[] arr) {
+        int minIdx = 0;
+        
+        for (int i = 1; i < arr.length - 1; i++) {
+            if ( arr[i] < arr[minIdx] ) {
+                minIdx = i;
+            }
+        }
+        
+        return minIdx;
+    }
+
+    public static int numberOfBelowAverageElements(int[] arr) {
+        double elementsAverage = average(arr);
+        int count = 0;
+        
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] < elementsAverage) {
+                count += 1;
+            }
+        }
+        
+        return count;
+    }
+    
+    public static int numberOfAboveAverageElements(int[] arr) {
+        double elementsAverage = average(arr);
+        int count = 0;
+        
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > elementsAverage) {
+                count += 1;
+            }
+        }
+        
+        return count;
+    }
+
+
        
     public static void main(String args[]) {
 
